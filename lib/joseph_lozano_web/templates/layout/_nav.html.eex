@@ -1,0 +1,20 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a href="<%= Routes.home_path(@conn, :index) %>" class="nav-link">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#writings">Writings</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#notes">Notes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#projects">Projects</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Now</a>
+  </li>
+</ul>
