@@ -1,0 +1,6 @@
+<h1>Writings</h1>
+<p>
+  <%= Content.about(:writings) %>
+</p>
+<p>Currently Empty</p>
+<%= render "_article_list.html", articles: @writings %>

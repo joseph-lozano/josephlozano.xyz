@@ -1,0 +1,5 @@
+<h1>Garden</h1>
+<p>
+  <%= Content.about(:garden) %>
+</p>
+<%= render "_article_list.html", articles: @articles %>

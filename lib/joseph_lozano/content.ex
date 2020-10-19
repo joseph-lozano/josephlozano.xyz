@@ -6,9 +6,24 @@ defmodule JL.Content do
     from: "content/**/*.md",
     as: :articles
 
+  if @articles
+     |> Enum.frequencies_by(& &1.id)
+     |> Enum.map(fn {_key, val} -> val end)
+     |> Enum.any?(&(&1 > 1)) do
+    raise("Articles must have unique IDs")
+  end
+
   @notes @articles
          |> Enum.filter(&(&1.category == "notes"))
          |> Enum.sort_by(& &1.date, {:desc, Date})
+
+  @writings @articles
+            |> Enum.filter(&(&1.category == "writings"))
+            |> Enum.sort_by(& &1.date, {:desc, Date})
+
+  @garden @articles
+          |> Enum.filter(&(&1.category == "garden"))
+          |> Enum.sort_by(& &1.title)
 
   @ids @articles
        |> Enum.map(&{&1.id, &1})
@@ -18,9 +33,41 @@ defmodule JL.Content do
 
   def all_articles, do: @articles
   def all_notes, do: @notes
+  def all_writings, do: @writings
+  def garden, do: @garden
   def all_tags, do: @tags
 
   def get_article(id) do
     Map.get(@ids, id)
+  end
+
+  def about(:notes) do
+    ~S"""
+    Notes are short-form writings. These should take less than 5 minutes to read.
+    """
+  end
+
+  def about(:writings) do
+    ~S"""
+    These are long-form essays. These should take more than 10 minutes to read.
+    """
+  end
+
+  def about(:garden) do
+    ~S"""
+    These are continuously updated pages on general areas of knowledge or interest
+    """
+  end
+
+  def about(:about) do
+    ~S"""
+    Information about this webpage, and myself
+    """
+  end
+
+  def about(:now) do
+    ~s"""
+    What I am up to currently.
+    """
   end
 end

@@ -1,16 +1,5 @@
 <h1>Notes</h1>
 <p>
-  Notes are short-form writings. These should take less than 5-minutes to read.
+  <%= Content.about(:notes) %>
 </p>
-<div class="container">
-  <%= for note <- @notes do %>
-    <div class="row">
-      <div class="col">
-        <%= Calendar.strftime(note.date, "%B %d %Y") %>
-        <a href="<%= note.id %>">
-          <%= note.title %>
-        </a>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render "_article_list.html", articles: @notes %>

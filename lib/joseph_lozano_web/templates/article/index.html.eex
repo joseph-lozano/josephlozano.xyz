@@ -1,0 +1,15 @@
+<div class="container">
+  <a href="#" class="h5">Notes</a>
+  <div class="mb-4"><%= Content.about(:notes) %></div>
+  <a href="#" class="h5">Writings</a>
+  <div class="mb-4"><%= Content.about(:writings) %></div>
+  <a href="#" class="h5">Garden</a>
+  <div class="mb-4"><%= Content.about(:garden) %></div>
+  <a href="#" class="h5">About</a>
+  <div class="mb-4"><%= Content.about(:about) %></div>
+  <a href="#" class="h5">Now</a>
+  <div class="mb-4">
+    <%= Content.about(:now) %>
+    <i>Last Updated: <%= Content.get_article("now").date %></i>
+  </div>
+</div>

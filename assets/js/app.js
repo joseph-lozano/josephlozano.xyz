@@ -2,6 +2,10 @@
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
 import "../css/app.scss"
+import hljs from "highlight.js"
+hljs.configure({ languages: ["elixir", "html", "css", "plaintext"] })
+hljs.initHighlightingOnLoad();
+
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured

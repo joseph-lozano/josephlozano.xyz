@@ -17,7 +17,7 @@ defmodule JLWeb.Router do
   scope "/", JLWeb do
     pipe_through :browser
 
-    get "/", HomeController, :index
+    get "/", ArticleController, :get
     get "/:slug", ArticleController, :get
   end
 

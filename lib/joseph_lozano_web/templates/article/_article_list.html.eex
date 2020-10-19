@@ -1,0 +1,14 @@
+<div class="container">
+  <%= for article <- @articles do %>
+    <div class="row">
+      <div class="col">
+        <%= if article.date do %>
+          <%= Calendar.strftime(article.date, "%B %d %Y") %>
+        <% end %>
+        <a href="<%= article.id %>">
+          <%= article.title %>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>
