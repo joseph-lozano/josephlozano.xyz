@@ -1,4 +1,7 @@
+<h5 class="alert alert-warning">DRAFT</h5>
 <h2><%= @article.title %></h2>
+<%= if @article.draft do %>
+<% end %>
 <%= if @article.date do %>
   Published: <%=  Calendar.strftime(@article.date, "%A, %B %d %Y") %>
 <% end %>

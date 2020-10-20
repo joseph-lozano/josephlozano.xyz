@@ -8,6 +8,9 @@
         <a href="<%= article.id %>">
           <%= article.title %>
         </a>
+        <%= if article.draft do %>
+          <span class="alert-warning">(draft)</span>
+        <% end %>
       </div>
     </div>
   <% end %>

@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :joseph_lozano, :show_drafts?, System.get_env("SHOW_DRAFTS") == "true"
+config :joseph_lozano, :show_drafts?, true
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -53,7 +53,8 @@ config :joseph_lozano, JLWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"lib/joseph_lozano_web/(live|views)/.*(ex)$",
-      ~r"lib/joseph_lozano_web/templates/.*(eex)$"
+      ~r"lib/joseph_lozano_web/templates/.*(eex)$",
+      ~r"content/.*md$"
     ]
   ]
 
