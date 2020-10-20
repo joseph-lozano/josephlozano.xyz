@@ -35,7 +35,7 @@ end
 My previous blog (little as it was) was written with Hugo, and while I think that Hugo is a fantastic tool, it wasn't for me.
 
 #### Themes were hard
-While there was a plentitude of custom themes out there for hugo sites, I found editing them to find my wants and needs just too difficult. Certainly, not beyond my ability, but beyond my willingness to spend time on.
+While there was a plenitude of custom themes out there for hugo sites, I found editing them to find my wants and needs just too difficult. Certainly, not beyond my ability, but beyond my willingness to spend time on.
 
 #### I wanted to use a toolchain I knew
 My previous job was 100% Elixir. I just accepted a new job working in Elixir. I know Elixir and Phoenix Framework forwards and backwards. I know that I can customize this site exactly how I want. With Hugo, or any of the other static site generators, I would be at the mercy of my time/willingness to learn those tools.
