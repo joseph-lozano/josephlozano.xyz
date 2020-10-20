@@ -7,8 +7,6 @@ defmodule JLWeb.ArticleController do
   end
 
   def get(conn, %{"slug" => slug}) do
-    IO.inspect(slug, label: "SLUG")
-
     case slug do
       "notes" ->
         render(conn, "notes.html", notes: Content.all_notes())

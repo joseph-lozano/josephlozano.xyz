@@ -20,6 +20,5 @@ defmodule JL.Content.Article do
       end
 
     struct!(__MODULE__, attrs)
-    |> IO.inspect(label: "F:")
   end
 end
