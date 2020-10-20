@@ -13,6 +13,9 @@ defmodule JL.Content do
     raise("Articles must have unique IDs")
   end
 
+  @hide_drafts not Application.get_env(:joseph_lozano, :show_drafts?, false)
+  @articles @articles |> Enum.reject(fn article -> @hide_drafts and article.draft end)
+
   @notes @articles
          |> Enum.filter(&(&1.category == "notes"))
          |> Enum.sort_by(& &1.date, {:desc, Date})

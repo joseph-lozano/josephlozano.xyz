@@ -1,5 +1,7 @@
 use Mix.Config
 
+config :joseph_lozano, :show_drafts?, System.get_env("SHOW_DRAFTS") == "true"
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

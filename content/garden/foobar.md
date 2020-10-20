@@ -1,5 +1,6 @@
 %{
-  title: "FOOBAR"
+  title: "FOOBAR",
+  draft: true
 }
 ---
 aADFf

@@ -2,7 +2,9 @@
 # from environment variables. You can also hardcode secrets,
 # although such is generally not recommended and you have to
 # remember to add this file to your .gitignore.
-use Mix.Config
+import Config
+
+config :joseph_lozano, :show_drafts?, System.get_env("SHOW_DRAFTS") == "true"
 
 secret_key_base =
   System.get_env("SECRET_KEY_BASE") ||
@@ -23,7 +25,7 @@ config :joseph_lozano, JLWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :joseph_lozano, JLWeb.Endpoint, server: true
+config :joseph_lozano, JLWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.

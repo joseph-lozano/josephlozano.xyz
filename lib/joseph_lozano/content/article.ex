@@ -1,6 +1,6 @@
 defmodule JL.Content.Article do
   @enforce_keys [:id, :title, :body, :category]
-  defstruct [:id, :title, :body, :date, :category, tags: [], description: ""]
+  defstruct [:id, :title, :body, :date, :category, tags: [], description: "", draft: false]
 
   def build(filename, attrs, body) do
     [category, filename] =
@@ -20,5 +20,6 @@ defmodule JL.Content.Article do
       end
 
     struct!(__MODULE__, attrs)
+    |> IO.inspect(label: "F:")
   end
 end
