@@ -43,7 +43,8 @@ defmodule JL.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:nimble_publisher, "~> 0.1.0"}
+      {:nimble_publisher,
+       git: "https://github.com/joseph-lozano/nimble_publisher", branch: "check-highlighters"}
     ]
   end
 
