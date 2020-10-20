@@ -29,7 +29,6 @@ defmodule JLWeb.ArticleController do
         if is_nil(article) do
           render(conn, "not_found.html", slug: slug)
         else
-          IO.inspect(article.description)
           render(conn, "article.html", article: article, description: article.description)
         end
     end

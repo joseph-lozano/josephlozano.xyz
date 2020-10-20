@@ -15,7 +15,8 @@ defmodule JL.Content.Article do
           date = Date.from_iso8601!("#{year}-#{month}-#{day}")
           [id: id, date: date, body: body, category: category] ++ Map.to_list(attrs)
 
-        [id] ->
+        id ->
+          id = Enum.join(id, "-")
           [id: id, date: nil, body: body, category: category] ++ Map.to_list(attrs)
       end
 

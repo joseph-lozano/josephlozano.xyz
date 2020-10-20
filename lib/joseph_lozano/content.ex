@@ -63,13 +63,13 @@ defmodule JL.Content do
 
   def about(:garden) do
     ~S"""
-    These are continuously updated pages on general areas of knowledge or interest
+    These are continuously updated pages on general areas of knowledge or interest.
     """
   end
 
   def about(:projects) do
     ~S"""
-    These are portifolio pieces/public projects I've built solo.
+    These are portifolio pieces/public projects I've built.
     """
   end
 

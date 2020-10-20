@@ -3,10 +3,10 @@
     <a href="<%= Routes.article_path(@conn, :get) %>" class="nav-link">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "writings") %>">Writings</a>
+    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "notes") %>">Notes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "notes") %>">Notes</a>
+    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "writings") %>">Writings</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "garden") %>">Garden</a>
