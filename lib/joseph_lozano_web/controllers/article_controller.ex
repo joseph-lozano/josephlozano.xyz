@@ -19,6 +19,9 @@ defmodule JLWeb.ArticleController do
       "garden" ->
         render(conn, "garden.html", articles: Content.garden())
 
+      "projects" ->
+        render(conn, "projects.html", projects: Content.all_projects())
+
       slug ->
         article = Content.get_article(slug)
 

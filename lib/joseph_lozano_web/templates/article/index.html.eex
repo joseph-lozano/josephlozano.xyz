@@ -1,13 +1,15 @@
 <div class="container">
-  <a href="#" class="h5">Notes</a>
+  <a href="<%= Routes.article_path(@conn, :get, "notes") %>" class="h5">Notes</a>
   <div class="mb-4"><%= Content.about(:notes) %></div>
-  <a href="#" class="h5">Writings</a>
+  <a href="<%= Routes.article_path(@conn, :get, "writings") %>" class="h5">Writings</a>
   <div class="mb-4"><%= Content.about(:writings) %></div>
-  <a href="#" class="h5">Garden</a>
+  <a href="<%= Routes.article_path(@conn, :get, "garden") %>" class="h5">Garden</a>
   <div class="mb-4"><%= Content.about(:garden) %></div>
-  <a href="#" class="h5">About</a>
+  <a href="<%= Routes.article_path(@conn, :get, "projects") %>" class="h5">Projects</a>
+  <div class="mb-4"><%= Content.about(:projects) %></div>
+  <a href="<%= Routes.article_path(@conn, :get, "about") %>" class="h5">About</a>
   <div class="mb-4"><%= Content.about(:about) %></div>
-  <a href="#" class="h5">Now</a>
+  <a href="<%= Routes.article_path(@conn, :get, "now") %>" class="h5">Now</a>
   <div class="mb-4">
     <%= Content.about(:now) %>
     <i>Last Updated: <%= Content.get_article("now").date %></i>

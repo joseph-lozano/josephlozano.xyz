@@ -25,6 +25,10 @@ defmodule JL.Content do
           |> Enum.filter(&(&1.category == "garden"))
           |> Enum.sort_by(& &1.title)
 
+  @projects @articles
+            |> Enum.filter(&(&1.category == "projects"))
+            |> Enum.sort_by(& &1.date, {:desc, Date})
+
   @ids @articles
        |> Enum.map(&{&1.id, &1})
        |> Enum.into(%{})
@@ -35,6 +39,7 @@ defmodule JL.Content do
   def all_notes, do: @notes
   def all_writings, do: @writings
   def garden, do: @garden
+  def all_projects, do: @projects
   def all_tags, do: @tags
 
   def get_article(id) do
@@ -56,6 +61,12 @@ defmodule JL.Content do
   def about(:garden) do
     ~S"""
     These are continuously updated pages on general areas of knowledge or interest
+    """
+  end
+
+  def about(:projects) do
+    ~S"""
+    These are portifolio pieces/public projects I've built solo.
     """
   end
 
