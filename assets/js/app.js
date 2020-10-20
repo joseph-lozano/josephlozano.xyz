@@ -12,7 +12,6 @@ import "../css/app.scss"
 //     import {Socket} from "phoenix"
 //     import socket from "./socket"
 //
-import "bootstrap"
 import "phoenix_html"
 import { Socket } from "phoenix"
 import NProgress from "nprogress"
@@ -33,4 +32,3 @@ liveSocket.connect()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
-

@@ -1,1 +1,3 @@
-import "./highlighter";
+import "bootstrap"
+import "./highlighter.js";
+
