@@ -24,10 +24,6 @@ defmodule JL.Content do
             |> Enum.filter(&(&1.category == "writings"))
             |> Enum.sort_by(& &1.date, {:desc, Date})
 
-  @garden @articles
-          |> Enum.filter(&(&1.category == "garden"))
-          |> Enum.sort_by(& &1.title)
-
   @projects @articles
             |> Enum.filter(&(&1.category == "projects"))
             |> Enum.sort_by(& &1.date, {:desc, Date})
@@ -41,7 +37,6 @@ defmodule JL.Content do
   def all_articles, do: @articles
   def all_notes, do: @notes
   def all_writings, do: @writings
-  def garden, do: @garden
   def all_projects, do: @projects
   def all_tags, do: @tags
 
@@ -58,12 +53,6 @@ defmodule JL.Content do
   def about(:writings) do
     ~S"""
     These are long-form essays. These should take more than 10 minutes to read.
-    """
-  end
-
-  def about(:garden) do
-    ~S"""
-    These are continuously updated pages on general areas of knowledge or interest.
     """
   end
 

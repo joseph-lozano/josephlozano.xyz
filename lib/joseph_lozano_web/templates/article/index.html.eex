@@ -3,8 +3,6 @@
   <div class="mb-4"><%= Content.about(:notes) %></div>
   <a href="<%= Routes.article_path(@conn, :get, "writings") %>" class="h5">Writings</a>
   <div class="mb-4"><%= Content.about(:writings) %></div>
-  <a href="<%= Routes.article_path(@conn, :get, "garden") %>" class="h5">Garden</a>
-  <div class="mb-4"><%= Content.about(:garden) %></div>
   <a href="<%= Routes.article_path(@conn, :get, "projects") %>" class="h5">Projects</a>
   <div class="mb-4"><%= Content.about(:projects) %></div>
   <a href="<%= Routes.article_path(@conn, :get, "about") %>" class="h5">About</a>

@@ -14,9 +14,6 @@ defmodule JLWeb.ArticleController do
       "writings" ->
         render(conn, "writings.html", writings: Content.all_writings())
 
-      "garden" ->
-        render(conn, "garden.html", articles: Content.garden())
-
       "projects" ->
         render(conn, "projects.html", projects: Content.all_projects())
 
