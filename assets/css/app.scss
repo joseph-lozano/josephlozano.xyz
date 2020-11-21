@@ -1,4 +1,7 @@
 /* This file is for your main application css. */
+$primary: #abcdef;
+$body-bg: #353535;
+$body-color: #dededd;
 @import "~bootstrap/scss/bootstrap";
 @import "atom-one-light.css";
 
@@ -6,7 +9,8 @@
 .alert:empty {
   display: none;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
