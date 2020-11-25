@@ -1,15 +1,16 @@
-<div class="container">
-  <a href="<%= Routes.article_path(@conn, :get, "notes") %>" class="h5">Notes</a>
-  <div class="mb-4"><%= Content.about(:notes) %></div>
-  <a href="<%= Routes.article_path(@conn, :get, "writings") %>" class="h5">Writings</a>
-  <div class="mb-4"><%= Content.about(:writings) %></div>
-  <a href="<%= Routes.article_path(@conn, :get, "projects") %>" class="h5">Projects</a>
-  <div class="mb-4"><%= Content.about(:projects) %></div>
-  <a href="<%= Routes.article_path(@conn, :get, "about") %>" class="h5">About</a>
-  <div class="mb-4"><%= Content.about(:about) %></div>
-  <a href="<%= Routes.article_path(@conn, :get, "now") %>" class="h5">Now</a>
-  <div class="mb-4">
-    <%= Content.about(:now) %>
-    <i>Last Updated: <%= Content.get_article("now").date %></i>
+<%# <% sections = [:notes, :writings, :projects, :about, :now] %>
+<% sections = [:notes, :projects, :about, :now] %>
+<%= for section <- sections do %>
+  <% str = Atom.to_string(section) %>
+  <div class="m-4 px-2">
+    <a class="link text-xl" href="<%= Routes.article_path(@conn, :get, section) %>" >
+      <%= String.capitalize(str) %>
+    </a>
+    <div class="text-lg text-gray-600">
+      <%= Content.about(section) %>
+      <%= if section == :now do %>
+        <span>Last Updated: <%= Content.get_article(str).date %></span>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>

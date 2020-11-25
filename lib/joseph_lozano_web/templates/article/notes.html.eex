@@ -1,5 +1,7 @@
-<h1>Notes</h1>
-<p>
-  <%= Content.about(:notes) %>
-</p>
-<%= render "_article_list.html", articles: @notes %>
+<div class="mx-6">
+  <h1 class="font-semibold text-lg">Notes</h1>
+  <p class="mt-2">
+    <%= Content.about(:notes) %>
+  </p>
+  <%= render "_article_list.html", articles: @notes %>
+</div>

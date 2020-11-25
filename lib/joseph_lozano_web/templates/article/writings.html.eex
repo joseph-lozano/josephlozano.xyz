@@ -1,6 +1,7 @@
-<h1>Writings</h1>
-<p>
-  <%= Content.about(:writings) %>
-</p>
-<p>Currently Empty</p>
-<%= render "_article_list.html", articles: @writings %>
+<div class="mx-6">
+  <h1 class="font-semibold text-lg">Writings</h1>
+  <p class="mt-2">
+    <%= Content.about(:writings) %>
+  </p>
+  <%= render "_article_list.html", articles: @writings %>
+</div>

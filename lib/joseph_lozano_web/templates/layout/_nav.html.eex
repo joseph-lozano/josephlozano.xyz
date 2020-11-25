@@ -1,20 +1,20 @@
-<ul class="nav">
-  <li class="nav-item">
-    <a href="<%= Routes.article_path(@conn, :get) %>" class="nav-link">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "notes") %>">Notes</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "writings") %>">Writings</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "projects") %>">Projects</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "about") %>">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= Routes.article_path(@conn, :get, "now") %>">Now</a>
-  </li>
-</ul>
+<nav class="">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="<%= Routes.article_path(@conn, :get) %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">Home</a>
+            <a href="<%= Routes.article_path(@conn, :get, "notes") %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">Notes</a>
+            <!--
+            <a href="<%= Routes.article_path(@conn, :get, "writings") %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">Writings</a>
+            -->
+            <a href="<%= Routes.article_path(@conn, :get, "projects") %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">Projects</a>
+            <a href="<%= Routes.article_path(@conn, :get, "about") %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">About</a>
+            <a href="<%= Routes.article_path(@conn, :get, "now") %>" class="px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

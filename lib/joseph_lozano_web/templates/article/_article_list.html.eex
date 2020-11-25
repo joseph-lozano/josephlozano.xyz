@@ -1,17 +1,14 @@
-<div class="container">
+<div class="mt-4">
   <%= for article <- @articles do %>
-    <div class="row">
-      <div class="col">
-        <%= if article.date do %>
-          <%= Calendar.strftime(article.date, "%B %d %Y") %>
-        <% end %>
-        <a href="<%= article.id %>">
-          <%= article.title %>
-        </a>
-        <%= if article.draft do %>
-          <span class="alert-warning">(draft)</span>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-</div>
+    <div class="">
+      <%= if article.date do %>
+        <%= Calendar.strftime(article.date, "%B %d %Y") %>
+      <% end %>
+      <a class="link" href="<%= article.id %>">
+        <%= article.title %>
+      </a>
+      <%= if article.draft do %>
+        <span class="">(draft)</span>
+      <% end %>
+    <% end %>
+  </div>

@@ -12,33 +12,15 @@
     <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/vendor.js") %>"></script>
     <script></script>
   </head>
-  <body>
+  <body class="">
     <header>
-      <div class="container">
+      <div class="">
         <%= render "_nav.html", conn: @conn %>
       </div>
     </header>
     <br/>
-    <div class="content">
+    <div class="">
       <%= @inner_content %>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="row mb-3 justify-content-center">
-          <div class="col-md-1">
-            <a href="https://github.com/joseph-lozano">Github</a>
-          </div>
-          <div class="col-md-1">
-            <a href="https://twitter.com/josephlozanoXYZ">Twitter</a>
-          </div>
-          <div class="col-md-1">
-            <a href="mailto:joseph@hey.com">Email</a>
-          </div>
-          <div class="col-md-1">
-            <a href="/resume.pdf">Resume</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

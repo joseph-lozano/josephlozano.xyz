@@ -1,0 +1,16 @@
+/* This file is for your main application css. */
+@import "./dracula.css";
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.link {
+  @apply font-semibold text-blue-500 hover:underline hover:text-blue-400;
+}
+
+.prose a {
+  @apply font-semibold text-blue-500 hover:underline hover:text-blue-400;
+}
