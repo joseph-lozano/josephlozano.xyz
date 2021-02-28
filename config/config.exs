@@ -20,13 +20,14 @@ config :proxy_web, ProxyWeb.Endpoint,
   pubsub_server: ProxyWeb.PubSub,
   live_view: [signing_salt: "9TlFyk75"]
 
-# Sample configuration:
-#
-#     config :logger, :console,
-#       level: :info,
-#       format: "$date $time [$level] $metadata$message\n",
-#       metadata: [:user_id]
-#
+# Configures the endpoint
+config :blog, BlogWeb.Endpoint,
+  url: [host: "localhost"],
+  secret_key_base: "LJmgbkRNL6uDabbSUPehBtB6LszYMqVZb9Ao39M3DmTP8mxQQ5iMmtQYach2aXyh",
+  render_errors: [view: BlogWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Blog.PubSub,
+  live_view: [signing_salt: "omyTCdLD"],
+  server: false
 
 # Configures Elixir's Logger
 config :logger, :console,

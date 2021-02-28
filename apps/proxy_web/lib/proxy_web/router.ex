@@ -13,10 +13,11 @@ defmodule ProxyWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ProxyWeb do
+  scope "/" do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", ProxyWeb.PageController, :index
+    forward "/blog", BlogWeb.Router
   end
 
   # Other scopes may use custom stacks.
