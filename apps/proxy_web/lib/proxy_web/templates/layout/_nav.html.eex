@@ -1,0 +1,12 @@
+<nav class="bg-white shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex">
+        <div class="sm:ml-6 sm:flex sm:space-x-8">
+          <%= for section <- ["home", "blog"] do %>
+            <%= link String.capitalize(section), to: "/#{section}", class: class(@conn.request_path, section) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

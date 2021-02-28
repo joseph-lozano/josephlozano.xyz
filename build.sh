@@ -7,12 +7,8 @@ mix deps.get --only prod
 MIX_ENV=prod mix compile
 
 # Compile assets
-npm install --prefix ./apps/blog/assets
-NODE_ENV=production npm run deploy --prefix ./apps/blog/assets
-
 npm install --prefix ./apps/proxy_web/assets
 NODE_ENV=production npm run deploy --prefix ./apps/proxy_web/assets
-
 
 mix phx.digest
 

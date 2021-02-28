@@ -3,6 +3,7 @@ defmodule ProxyWeb.Router do
 
   pipeline :browser do
     plug :accepts, ["html"]
+    plug :put_root_layout, {ProxyWeb.LayoutView, :root}
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -17,6 +18,7 @@ defmodule ProxyWeb.Router do
     pipe_through :browser
 
     get "/", ProxyWeb.PageController, :index
+    get "/home", ProxyWeb.PageController, :index
     forward "/blog", BlogWeb.Router
   end
 

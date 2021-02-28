@@ -24,7 +24,7 @@ defmodule ProxyWeb.Endpoint do
     at: "/",
     from: :proxy_web,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images js favicon.ico robots.txt resume.pdf)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

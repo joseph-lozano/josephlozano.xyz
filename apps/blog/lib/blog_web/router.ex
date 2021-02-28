@@ -4,7 +4,6 @@ defmodule BlogWeb.Router do
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
-    plug :put_layout, {BlogWeb.LayoutView, :app}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
