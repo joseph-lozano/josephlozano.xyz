@@ -110,3 +110,5 @@ config :proxy_web, ProxyWeb.Endpoint,
       ~r"lib/proxy_web/templates/.*(eex)$"
     ]
   ]
+
+config :blog, :show_drafts?, true

@@ -1,0 +1,17 @@
+<%# <% sections = [:notes, :writings, :projects, :about, :now] %>
+<% sections = [:writings, :about, :now, :contact] %>
+<%= for section <- sections do %>
+  <% str = Atom.to_string(section) %>
+  <div class="m-4 px-2">
+    <a class="link text-xl" href="<%= Routes.article_path(@conn, :get, section) %>" >
+      <%= String.capitalize(str) %>
+    </a>
+    <div class="text-lg text-gray-700">
+      <%= if section == :now do %>
+        <span class="text-gray-400">
+          Last Updated: <%= Calendar.strftime(Content.get_article(str).date, "%B %d") %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+<% end %>

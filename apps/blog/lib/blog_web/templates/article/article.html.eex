@@ -1,0 +1,13 @@
+<div class="mx-6">
+  <%= if @article.draft do %>
+    <div class="font-bold text-center bg-red-400 tracking-wide">DRAFT</div>
+  <% end %>
+  <h2 class="text-3xl font-bold text-gray-900"><%= @article.title %></h2>
+  <%= if @article.date do %>
+    Published: <%=  Calendar.strftime(@article.date, "%A, %B %d %Y") %>
+  <% end %>
+  <hr/>
+  <div class="prose lg:prose-lg mt-6">
+    <%= raw(@article.body) %>
+  </div>
+</div>

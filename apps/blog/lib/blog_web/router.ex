@@ -4,7 +4,7 @@ defmodule BlogWeb.Router do
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
-    plug :fetch_flash
+    plug :put_layout, {BlogWeb.LayoutView, :app}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -16,7 +16,8 @@ defmodule BlogWeb.Router do
   scope "/", BlogWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", ArticleController, :get
+    get "/:slug", ArticleController, :get
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,18 @@
+<nav class="">
+  <div class="mx-auto">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="hidden sm:block mx-4">
+          <div class="flex space-x-4">
+            <% routes = ~w(home writings about now contact) %>
+            <%= for route <- routes do %>
+              <a href="<%= Routes.article_path(@conn, :get, route) %>" class="px-1.5 py-0.5 rounded-md text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-500">
+                <%= String.capitalize(route) %>
+              </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,4 @@
+<div class="mx-6">
+  <h1 class="font-semibold text-xl">Writings</h1>
+  <%= render "_article_list.html", articles: @writings %>
+</div>

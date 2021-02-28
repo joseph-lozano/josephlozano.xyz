@@ -1,0 +1,22 @@
+<footer>
+  <ul class="flex justify-around">
+    <li class="mx-4">
+      <a class="link" href="https://github.com/joseph-lozano">Github</a>
+    </li class="mx-4">
+    <li class="mx-4">
+      <a class="link" href="https://twitter.com/josephlozanoXYZ">Twitter</a>
+    </li>
+    <li class="mx-4">
+      <a class="link" href="mailto:joseph@hey.com">Email</a>
+    </li>
+    <li class="mx-4">
+      <a class="link" href="/resume.pdf">Resume</a>
+    </li>
+  </ul>
+  <% {hash, 0} = System.cmd("git", ["rev-parse", "--short", "HEAD"]) %>
+  <div class="text-center text-gray-400">
+    <a href="https://github.com/joseph-lozano/josephlozano.xyz/commit/<%= hash %>" class="hover:underline">
+      <%= hash %>
+    </a>
+  </div>
+</footer>
