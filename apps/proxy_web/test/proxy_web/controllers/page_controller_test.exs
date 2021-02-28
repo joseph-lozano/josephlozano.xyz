@@ -3,6 +3,6 @@ defmodule ProxyWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")
-    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
+    assert html_response(conn, 200) =~ "My blog and all my projects are hosted on this page"
   end
 end
