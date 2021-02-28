@@ -22,7 +22,7 @@ defmodule BlogWeb.Endpoint do
   plug(Plug.Static,
     at: "/",
     from: :blog,
-    gzip: false,
+    gzip: true,
     only: ~w(css fonts images js resume.pdf favicon.ico robots.txt)
   )
 
